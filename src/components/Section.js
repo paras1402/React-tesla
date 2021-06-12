@@ -21,7 +21,6 @@ function Section(props) {
 export default Section;
 
 const Container = styled.div`
-  background-color: blue;
   width: 100%;
   height: 100vh;
   background-image: ${(props) =>
