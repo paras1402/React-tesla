@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-function Section() {
+
+function Section(props) {
   return (
-    <Container>
+    <Container bgImage={props.backgroundImg}>
       <ItemText>
-        <h1>Model S</h1>
-        <p>Order Online for Touchless Delivery</p>
+        <h1>{props.title}</h1>
+        <p>{props.description}</p>
       </ItemText>
 
       <ButtonGroup>
-        <LeftButton>CUSTOM ORDER</LeftButton>
-        <RightButton>EXISTING INVENTORY</RightButton>
+        <LeftButton>{props.leftBtnText}</LeftButton>
+        <RightButton>{props.rightBtnText}</RightButton>
       </ButtonGroup>
       <DownArrow src="/tesla-clone-images/images/down-arrow.svg"></DownArrow>
     </Container>
@@ -24,7 +24,8 @@ const Container = styled.div`
   background-color: blue;
   width: 100%;
   height: 100vh;
-  background-image: url("/tesla-clone-images/images/model-s.jpg");
+  background-image: ${(props) =>
+    `url('tesla-clone-images/images/${props.bgImage}')`};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,7 +59,9 @@ const LeftButton = styled.div`
   font-size: 12px;
   opacity: 0.85;
   margin: 8px;
+  cursor: pointer;
 `;
+
 const RightButton = styled(LeftButton)`
   background-color: white;
   color: black;
@@ -67,4 +70,6 @@ const RightButton = styled(LeftButton)`
 
 const DownArrow = styled.img`
   height: 40px;
+  animation: animateDown infinite 1.5s;
+  margin-bottom: 50px;
 `;
