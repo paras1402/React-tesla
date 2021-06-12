@@ -26,6 +26,7 @@ const Container = styled.div`
   height: 100vh;
   background-image: ${(props) =>
     `url('tesla-clone-images/images/${props.bgImage}')`};
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
