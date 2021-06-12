@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-
+import classes from "./Section.module.css";
 function Section(props) {
   return (
-    <Container bgImage={props.backgroundImg}>
+    <Container className={classes.container} bgImage={props.backgroundImg}>
       <ItemText>
         <h1>{props.title}</h1>
         <p>{props.description}</p>
@@ -44,12 +44,17 @@ const ItemText = styled.div`
 
 const ButtonGroup = styled.div`
   display: flex;
-  margin-bottom: 30px;
+  justify-content: center;
+
+  width: 90%;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
 `;
 
 const LeftButton = styled.div`
-  height: 40px;
-  width: 250px;
+  text-align: center;
+  height: 2.8rem;
+  width: 17rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +64,7 @@ const LeftButton = styled.div`
   background-color: rgba(23, 36, 32, 0.8);
   font-size: 12px;
   opacity: 0.85;
-  margin: 8px;
+  margin: 1.2rem;
   cursor: pointer;
 `;
 
