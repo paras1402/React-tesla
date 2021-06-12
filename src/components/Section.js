@@ -54,6 +54,7 @@ const ButtonGroup = styled.div`
 const LeftButton = styled.div`
   text-align: center;
   height: 2.8rem;
+  padding: 0 2.5rem;
   width: 17rem;
   display: flex;
   justify-content: center;
@@ -62,7 +63,7 @@ const LeftButton = styled.div`
   text-transform: uppercase;
   border-radius: 100px;
   background-color: rgba(23, 36, 32, 0.8);
-  font-size: 12px;
+  font-size: 0.6rem;
   opacity: 0.85;
   margin: 1.2rem;
   cursor: pointer;
